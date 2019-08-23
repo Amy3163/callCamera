@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>扫描</title>
+        <!--<link rel="stylesheet" href="../../JQ.MBL/jquery.mobile-1.4.5.min.css" />-->
+        <script src="js/jquery.min-v1.11.3.js"></script>
+        <!--<script src="../../JQ.MBL/jquery.mobile-1.4.5.min.js"></script>-->
+        <script src="js/adapter-latest.js"></script>
+        <script src="js/quagga.min.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <div>
+                <p>demo是用getUserMedia调用摄像头成像调用quagga插件解析条码</p>
+                <p>getUserMedia有兼容性问题，支持如下：</p>
+                <p><img src="timg1.png" width="100%" /></p>
+                <p>华为自带浏览器，以及安卓微信浏览器测试可以</p>
+                <p>支持的UC在12.0.8.988版本测试过发现支持这个getUserMedia方法，也成功回调了却不能成像</p>
+                <p>小米自带浏览器测试发现不能打开摄像，应该是小米自带浏览器有安全性检测，浏览器不允许调用摄像头。</p>
+            </div>
+            <select id="select"></select>
+            <input type="button" title="开启摄像头" value="开启摄像头" onclick="getMedia();" />
+            <div class="booth">
+                <video id="video" style="background:#000;" width="400" height="400"></video>
+                <canvas id='canvas' style="display: none;" width='400' height='400'></canvas>
+            </div>
+            <script src="js/callCamera.js"></script>
+        </div>
+        <!-- /page -->
+
+
+    </body>
+
+</html>
